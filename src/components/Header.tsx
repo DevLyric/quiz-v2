@@ -27,6 +27,7 @@ const Header = () => {
             <button
               onClick={() => {
                 logout();
+                window.location.reload();
               }}
             >
               LOG OUT
