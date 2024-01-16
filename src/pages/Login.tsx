@@ -18,7 +18,7 @@ export const Login = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
+    <div className="w-screen flex items-center justify-center mt-40">
       <div className="container mx-auto w-full max-w-lg px-5">
         <div className="mb-8">
           <h1 className="text-2xl font-medium">Account Login</h1>

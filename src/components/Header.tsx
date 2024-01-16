@@ -21,9 +21,9 @@ const Header = () => {
     <div className="flex items-center shadow-md h-20">
       <div className="container mx-auto w-full max-w-7xl flex items-center justify-between px-5">
         <h1 className="text-3xl font-semibold">Quiz</h1>
-        {currentUserEmail ? (
-          <div className="flex items-center gap-3 font-medium tracking-wider">
-            <Link to="/score">SCORE</Link>
+        <div className="flex items-center gap-3 font-medium tracking-wider">
+          <Link to="/score">SCORE</Link>
+          {currentUserEmail ? (
             <button
               onClick={() => {
                 logout();
@@ -31,13 +31,10 @@ const Header = () => {
             >
               LOG OUT
             </button>
-          </div>
-        ) : (
-          <>
-            <Link to="/score">SCORE</Link>
-            <Link to="/login">SIGNUP/LOGIN</Link>
-          </>
-        )}
+          ) : (
+            <Link to="/">SIGNUP/LOGIN</Link>
+          )}
+        </div>
       </div>
     </div>
   );
