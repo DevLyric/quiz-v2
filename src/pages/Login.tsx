@@ -2,8 +2,8 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   const handleSubmit = (event: FormEvent) => event.preventDefault();
 
@@ -25,7 +25,7 @@ export const Login = () => {
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setEmail(event.target.value)
             }
-            placeholder="Email..."
+            placeholder="Email:"
           />
 
           <input
@@ -35,7 +35,7 @@ export const Login = () => {
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setPassword(event.target.value)
             }
-            placeholder="Password"
+            placeholder="Password:"
           />
 
           <button className="rounded p-3  bg-blue-500 text-white font-medium">
@@ -44,7 +44,7 @@ export const Login = () => {
 
           <p className="text-center">
             Don't have an account?{" "}
-            <Link to="/" className="text-blue-700">
+            <Link to="/signup" className="text-blue-700 font-medium">
               Sign up here
             </Link>
           </p>
