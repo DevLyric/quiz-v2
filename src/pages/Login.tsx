@@ -36,6 +36,7 @@ export const Login = () => {
               setEmail(event.target.value)
             }
             placeholder="Email:"
+            required
           />
 
           <input
@@ -46,6 +47,7 @@ export const Login = () => {
               setPassword(event.target.value)
             }
             placeholder="Password:"
+            required
           />
 
           <button className="rounded p-3  bg-blue-500 text-white font-medium">

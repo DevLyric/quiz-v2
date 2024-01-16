@@ -35,6 +35,7 @@ const Signup = () => {
               setUsername(event.target.value)
             }
             placeholder="Username:"
+            required
           />
 
           <input
@@ -45,6 +46,7 @@ const Signup = () => {
               setEmail(event.target.value)
             }
             placeholder="Email:"
+            required
           />
 
           <input
@@ -55,6 +57,7 @@ const Signup = () => {
               setPassword(event.target.value)
             }
             placeholder="Password:"
+            required
           />
 
           <button
