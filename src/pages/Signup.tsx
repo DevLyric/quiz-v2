@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signup } from "../constants";
+import { UserData, signup } from "../constants";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -10,7 +10,9 @@ const Signup = () => {
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    const loginSuccessful = await signup(email, password);
+    const score = 0;
+    const userData: UserData = { username, score };
+    const loginSuccessful = await signup(email, password, userData);
 
     if (loginSuccessful) {
       navigate("/");
