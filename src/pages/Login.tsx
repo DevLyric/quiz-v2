@@ -1,11 +1,21 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "../constants";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const handleSubmit = (event: FormEvent) => event.preventDefault();
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+
+    const loginSuccessful = await login(email, password);
+
+    if (loginSuccessful) {
+      navigate("/quiz");
+    }
+  };
 
   return (
     <div className="h-screen w-screen flex items-center justify-center">
