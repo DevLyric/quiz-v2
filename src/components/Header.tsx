@@ -22,7 +22,7 @@ const Header = () => {
       <div className="container mx-auto w-full max-w-7xl flex items-center justify-between px-5">
         <h1 className="text-3xl font-semibold">Quiz</h1>
         <div className="flex items-center gap-3 font-medium tracking-wider">
-          <Link to="/score">SCORE</Link>
+          <Link to="/leaderboard">SCORE</Link>
           {currentUserEmail ? (
             <button
               onClick={() => {
