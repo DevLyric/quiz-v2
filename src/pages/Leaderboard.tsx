@@ -21,15 +21,13 @@ const Leaderboard = () => {
     getUsers();
   }, []);
 
-  console.log(users);
-
   return (
     <div className="w-screen flex items-center justify-center mt-40">
-      <div className="container mx-auto w-full max-w-7xl flex flex-col gap-8">
+      <div className="container mx-auto w-full max-w-7xl flex flex-col gap-8 px-5">
         {users.map((user) => (
           <div key={user.id} className="flex items-center justify-between">
-            <h1 className="text-2xl font-medium">Username: {user.username}</h1>
-            <h1 className="text-2xl font-medium">Score: {user.score}</h1>
+            <h1 className="font-medium">Username: {user.username}</h1>
+            <h1 className="font-medium">Score: {user.score}</h1>
           </div>
         ))}
       </div>
