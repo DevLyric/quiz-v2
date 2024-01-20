@@ -15,7 +15,7 @@ const Signup = () => {
     const loginSuccessful = await signup(email, password, userData);
 
     if (loginSuccessful) {
-      navigate("/");
+      navigate("/login");
     }
   };
 
@@ -31,7 +31,7 @@ const Signup = () => {
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
             type="text"
-            className="border rounded p-3"
+            className="border rounded p-3 text-black outline-none"
             value={username}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setUsername(event.target.value)
@@ -42,7 +42,7 @@ const Signup = () => {
 
           <input
             type="email"
-            className="border rounded p-3"
+            className="border rounded p-3 text-black outline-none"
             value={email}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setEmail(event.target.value)
@@ -53,7 +53,7 @@ const Signup = () => {
 
           <input
             type="password"
-            className="border rounded p-3"
+            className="border rounded p-3 text-black outline-none"
             value={password}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setPassword(event.target.value)
@@ -64,7 +64,7 @@ const Signup = () => {
 
           <button
             type="submit"
-            className="rounded p-3  bg-blue-500 text-white font-medium"
+            className="rounded p-3 bg-blue-500 text-white font-medium"
           >
             Continue
           </button>

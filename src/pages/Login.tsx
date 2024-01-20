@@ -13,7 +13,7 @@ export const Login = () => {
     const loginSuccessful = await login(email, password);
 
     if (loginSuccessful) {
-      navigate("/quiz");
+      navigate("/");
     }
   };
 
@@ -22,7 +22,7 @@ export const Login = () => {
       <div className="container mx-auto w-full max-w-lg px-5">
         <div className="mb-8">
           <h1 className="text-2xl font-medium">Account Login</h1>
-          <p className="text-sm pt-2 text-gray-400">
+          <p className="text-sm pt-2 font-medium text-gray-400">
             If you are already a member you can login with your email address
             and password.
           </p>
@@ -30,7 +30,7 @@ export const Login = () => {
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
             type="email"
-            className="border rounded p-3"
+            className="border rounded p-3 text-black outline-none"
             value={email}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setEmail(event.target.value)
@@ -41,7 +41,7 @@ export const Login = () => {
 
           <input
             type="password"
-            className="border rounded p-3"
+            className="border rounded p-3 text-black outline-none"
             value={password}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               setPassword(event.target.value)
@@ -50,7 +50,7 @@ export const Login = () => {
             required
           />
 
-          <button className="rounded p-3  bg-blue-500 text-white font-medium">
+          <button className="rounded p-3 bg-blue-500 text-white font-medium">
             Login
           </button>
 
