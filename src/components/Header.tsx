@@ -27,13 +27,13 @@ const Header = () => {
             <button
               onClick={() => {
                 logout();
-                window.location.reload();
+                window.location.href = "/login";
               }}
             >
               LOG OUT
             </button>
           ) : (
-            <Link to="/">SIGNUP/LOGIN</Link>
+            <Link to="/login">SIGNUP/LOGIN</Link>
           )}
         </div>
       </div>
