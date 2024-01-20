@@ -14,7 +14,7 @@ const Home = () => {
         </p>
 
         <Link to="/quiz">
-          <button className="rounded p-3 bg-black text-white font-medium">
+          <button className="rounded p-3 bg-white text-black font-medium">
             Start the Quiz
           </button>
         </Link>

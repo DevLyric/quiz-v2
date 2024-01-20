@@ -11,7 +11,7 @@ const Game = ({ question, currentQuestion, onSelectAnswer }: Props) => {
 
       {currentQuestion.map((item) => (
         <button
-          className="bg-black text-white font-medium rounded p-2"
+          className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% font-medium rounded p-3"
           onClick={() => onSelectAnswer(item)}
           key={item}
         >
