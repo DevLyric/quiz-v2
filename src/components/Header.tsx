@@ -20,7 +20,9 @@ const Header = () => {
   return (
     <div className="flex items-center shadow-md h-20">
       <div className="container mx-auto w-full max-w-7xl flex items-center justify-between px-5">
-        <h1 className="text-3xl font-semibold">Quiz</h1>
+        <Link to="/" className="text-3xl font-semibold">
+          Quiz
+        </Link>
         <div className="flex items-center gap-3 font-medium tracking-wider">
           <Link to="/leaderboard">SCORE</Link>
           {currentUserEmail ? (
