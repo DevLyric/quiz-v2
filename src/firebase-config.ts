@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAE2Mbd1YY8EFA6G6aasj-efdIbaP662So",
-  authDomain: "quiz-v2-19890.firebaseapp.com",
-  projectId: "quiz-v2-19890",
-  storageBucket: "quiz-v2-19890.appspot.com",
-  messagingSenderId: "141516677040",
-  appId: "1:141516677040:web:eace8acf062d0f22f18075",
+  apiKey: import.meta.env.VITE_REACT_APP_API_KEY,
+  authDomain: import.meta.env.VITE_REACT_APP_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_REACT_APP_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_REACT_APP_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_REACT_APP_APP_ID,
 };
 
 // Initialize Firebase
